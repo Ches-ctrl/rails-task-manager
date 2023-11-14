@@ -1,0 +1,12 @@
+<div>
+  <%= form_with(model: @task , html: {class: "d-flex flex-column"}) do |f| %>
+    <%= f.label :title , class: "form-label" %>
+    <%= f.text_field :title , class: "form-control mb-2" %>
+    <%= f.label :details , class: "form-label" %>
+    <%= f.text_field :details , class: "form-control mb-2" %>
+    <%= f.label :completed , class: "form-label" %>
+    <%= f.check_box :completed , class: "align-start mb-2" %>
+    <%= f.submit %>
+  <% end %>
+</div>
+<p class="pt-2"><%= link_to "Back to task page", task_path %></p>
